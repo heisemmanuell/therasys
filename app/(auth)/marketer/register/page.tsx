@@ -58,6 +58,11 @@ export default function MarketerRegister() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
 
+  const handleTabClick = (tab: "marketer" | "doctor") => {
+    setActiveTab(tab);
+    router.push(`/${tab}/register`);
+  };
+
   const form = useForm<FormValues>({
     resolver: zodResolver(registerFormSchema),
     defaultValues: {
@@ -146,7 +151,7 @@ export default function MarketerRegister() {
           onClick={() => document.getElementById(field)?.click()}
         >
           <Upload className="h-4 w-4 mr-2" />
-          {uploadedFiles[field] ? "Change" : "Upload Image"}
+          {uploadedFiles[field] ? "Change" : "Upload"}
         </Button>
       </div>
 
@@ -197,7 +202,7 @@ export default function MarketerRegister() {
             {/* Tabs */}
             <div className="flex justify-center space-x-8 border-b border-gray-200">
               <button
-                onClick={() => setActiveTab('marketer')}
+                onClick={() => handleTabClick("marketer")}
                 className={`pb-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === 'marketer'
                     ? 'border-secondary text-secondary'
@@ -207,7 +212,7 @@ export default function MarketerRegister() {
                 Marketer
               </button>
               <button
-                onClick={() => setActiveTab('doctor')}
+                onClick={() => handleTabClick("doctor")}
                 className={`pb-2 px-1 border-b-2 font-medium text-sm transition-colors  ${
                   activeTab === 'doctor'
                     ? 'border-secondary text-secondary'
