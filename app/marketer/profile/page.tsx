@@ -59,20 +59,25 @@ export default function DoctorDashboard() {
         <Card>
           <CardHeader>
             <CardTitle className="text-lg font-medium">
-              Doctor Information
+              Marketer Information
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-secondary">
-                Werey Babatunde
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                305 FM 517 Road E.
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Dickinson, TX 77539-1628
-              </p>
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" className="relative h-10 w-10 p-10 rounded-full bg-secondary hover:bg-secondary text-white hover:text-white cursor-pointer">
+                WB
+              </Button>
+              <div className="flex flex-col">
+                <h3 className="font-semibold text-secondary">
+                  Werey Babatunde
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  305 FM 517 Road E.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Dickinson, TX 77539-1628
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">

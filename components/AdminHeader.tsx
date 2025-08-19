@@ -214,20 +214,6 @@ const AdminHeader = () => {
                 <div className='flex flex-row p-5 gap-4'>
                   <div className='flex flex-col'>
                     <p className='font-bold bg-blue-100 px-3 py-[0.2px] mb-2 rounded-md text-lg'>Clinic</p>
-                    {/* <ul className='ml-2 space-y-1 text-sm'>
-                      <Link href="/admin/more/authorization/" className="text-blue-600 hover:underline">Authorizations</Link>
-                      <li>Client Compliance</li>
-                      <li>Clinic Files</li>
-                      <li>Default Goals</li>
-                      <li>Document Templates</li>
-                      <li>Portal Parental Access (CP)</li>
-                      <li>Roles</li>
-                      <li>Services</li>
-                      <li>Settings</li>
-                      <li>Sites</li>
-                      <li>Staff Documents</li>
-                    </ul> */}
-
                     <ul className="ml-2 space-y-1 text-sm">
                       {links.map((link) => (
                         <li key={link.href}>

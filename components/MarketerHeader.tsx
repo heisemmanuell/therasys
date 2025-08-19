@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from "lucide-react";
 
-const DoctorHeader = () => {
+const MarketerHeader = () => {
   const pathname = usePathname()
    const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -35,15 +35,14 @@ const DoctorHeader = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-9">
-            {/* <Link className={`hover:text-primary ${isActive('/doctor/dashboard') ? 'text-primary' : ''}`} href="/doctor/dashboard">Home</Link> */}
-            <Link className={`hover:text-primary ${isActive('/doctor/appointments') ? 'text-primary' : ''}`} href="/doctor/appointments">Appointments</Link>
-            <Link className={`hover:text-primary ${isActive('/doctor/messaging') ? 'text-primary' : ''}`} href="/doctor/messages">Messaging</Link>
-            <Link className={`hover:text-primary ${isActive('/doctor/diagnosis') ? 'text-primary' : ''}`} href="/doctor/client">Client</Link>
+            <Link className={`hover:text-primary ${isActive('/marketer/appointments') ? 'text-primary' : ''}`} href="/marketer/appointments">Appointments</Link>
+            <Link className={`hover:text-primary ${isActive('/marketer/messaging') ? 'text-primary' : ''}`} href="/marketer/messages">Messaging</Link>
+            <Link className={`hover:text-primary ${isActive('/marketer/register-a-doc') ? 'text-primary' : ''}`} href="/marketer/register-a-doc">Register a Doctor</Link>
           </nav>
 
           {/* Right Side - Profile */}
           <div className="flex items-center space-x-4">
-            <Link href="/doctor/profile">
+            <Link href="/marketer/profile">
               <Button variant="ghost" className="relative h-8 w-8 rounded-full bg-secondary hover:bg-secondary text-white hover:text-white cursor-pointer">
                 MI
               </Button>
@@ -60,12 +59,10 @@ const DoctorHeader = () => {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <nav className="md:hidden bg-white border-t flex flex-col space-y-2 px-6 py-4">
-            <Link onClick={() => setMobileOpen(false)} href="/doctor/dashboard" className={`hover:text-primary ${isActive('/doctor/dashboard') ? 'text-primary' : ''}`}>Home</Link>
-            
+          <nav className="md:hidden bg-white border-t flex flex-col space-y-2 px-6 py-4">            
             <Link onClick={() => setMobileOpen(false)} href="/doctor/appointments" className={`hover:text-primary ${isActive('/doctor/appointments') ? 'text-primary' : ''}`}>Appointments</Link>
             <Link onClick={() => setMobileOpen(false)} href="/doctor/messaging" className={`hover:text-primary ${isActive('/doctor/messaging') ? 'text-primary' : ''}`}>Messaging</Link>
-            <Link onClick={() => setMobileOpen(false)} href="/doctor/client" className={`hover:text-primary ${isActive('/doctor/diagnosis') ? 'text-primary' : ''}`}>Client</Link>
+            <Link onClick={() => setMobileOpen(false)} href="/doctor/client" className={`hover:text-primary ${isActive('/doctor/diagnosis') ? 'text-primary' : ''}`}>Register a Doctor</Link>
           </nav>
         )}
       </div>
@@ -73,4 +70,4 @@ const DoctorHeader = () => {
   )
 }
 
-export default DoctorHeader
+export default MarketerHeader
