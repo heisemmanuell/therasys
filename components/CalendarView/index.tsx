@@ -175,6 +175,16 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
               />
             </div>
 
+            {/* <div>
+              <Label>Location</Label>
+              <Input 
+                type="time" 
+                value={form.time} 
+                onChange={(e) => setForm({ ...form, time: e.target.value })} 
+                required 
+              />
+            </div> */}
+
             <Button type="submit" className="w-full">
               {form.id ? "Update Appointment" : "Add Appointment"}
             </Button>
