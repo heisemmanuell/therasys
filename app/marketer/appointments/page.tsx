@@ -8,27 +8,44 @@ import CalendarView from '@/components/CalendarView'
 
 const initialEvents: Event[] = [
   {
-    id: '1',
-    title: 'Client Meeting',
-    date: '2024-11-04',
-    time: '07:15 AM',
-    location: '96 Davion Mission Suite 157',
-    type: 'client-meeting',
-    address: '96 Davion Mission Suite 157',
-    age: '30',
-    sex: 'male'
+    id: "1",
+    title: "Consultation with John",
+    clientName: "John",
+    date: "2025-08-06",
+    time: "15:27",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "35",
+    sex: "male",
+    type: "client-meeting",
+    signature: "",
   },
   {
-    id: '2',
-    title: 'Weekend Festival',
-    date: '2024-11-23',
-    time: '01:00 PM',
-    location: '823 Monte Flats Suite 158',
-    type: 'festival',
-    address: '96 Davion Mission Suite 157',
-    age: '30',
-    sex: 'male'
-  }
+    id: "2",
+    title: "Consultation with Doe",
+    clientName: "Doe",
+    date: "2025-08-20",
+    time: "15:27",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "28",
+    sex: "male",
+    type: "client-meeting",
+    signature: "",
+  },
+  {
+    id: "3",
+    title: "Follow-up with Jane",
+    clientName: "Jane",
+    date: "2025-08-06",
+    time: "15:27",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "32",
+    sex: "female",
+    type: "client-meeting",
+    signature: "",
+  },
 ]
 
 const ClientAppointments = () => {
