@@ -339,7 +339,7 @@ export default function ChatDashboard() {
                     className="text-red-500 hover:text-red-700 font-medium"
                     onClick={() => {
                       setRecordedAudioURL(null);
-                      setAudioChunks([]);
+                      // setAudioChunks([]);
                     }}>
                     Discard
                   </button>
@@ -363,11 +363,11 @@ export default function ChatDashboard() {
                       const audioBlob = new Blob(chunks, { type: "audio/webm" }); // or 'audio/ogg; codecs=opus'
                       const url = URL.createObjectURL(audioBlob);
                       setRecordedAudioURL(url);
-                      setAudioChunks([]);
+                      // setAudioChunks([]);
                     };
 
                     recorder.start();
-                    setAudioChunks([]); // reset before starting
+                    // setAudioChunks([]); // reset before starting
                     setMediaRecorder(recorder);
                     setIsRecording(true);
                   } catch (err) {
