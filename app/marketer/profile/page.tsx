@@ -148,7 +148,7 @@ export default function DoctorDashboard() {
                     <DialogHeader>
                       <DialogTitle>Change Client PIN</DialogTitle>
                     </DialogHeader>
-                    <ChangePinForm setOpen={setOpenClientPin} onPinChange={handleClientPinChange} />
+                    {/* <ChangePinForm setOpen={setOpenClientPin} onPinChange={handleClientPinChange} /> */}
                   </DialogContent>
                 </Dialog>
               </div>
