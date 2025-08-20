@@ -339,7 +339,7 @@ export default function ChatDashboard() {
                     className="text-red-500 hover:text-red-700 font-medium"
                     onClick={() => {
                       setRecordedAudioURL(null);
-                      setAudioChunks([]);
+                      // setAudioChunks([]);
                     }}>
                     Discard
                   </button>
