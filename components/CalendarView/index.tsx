@@ -94,6 +94,7 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
     const newEvent: Event = {
       id: form.id || String(Date.now()),
       title: form.clientName,
+      clientName: form.clientName,
       date: form.date,
       time: form.time,
       address: form.address,

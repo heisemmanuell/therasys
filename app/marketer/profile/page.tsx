@@ -12,7 +12,7 @@ import {
 
 import { Calendar, Dna, Phone } from 'lucide-react'
 import UpdateClientSignatureForm from "@/components/forms/UpdateClientSignatureForm"
-import ChangePinForm from "@/components/forms/ChangePinForm"
+// import ChangePinForm from "@/components/forms/ChangePinForm"
 
 import { useState } from "react"
 import Image from "next/image"
