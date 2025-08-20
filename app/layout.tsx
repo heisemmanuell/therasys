@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 // import { Toaster } from "@/components/ui/toaster";
-import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
 const raleway = Raleway({

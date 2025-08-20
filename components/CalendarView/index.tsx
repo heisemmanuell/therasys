@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from '@fullcalendar/interaction'
+import interactionPlugin, { DateClickArg } from '@fullcalendar/interaction'
 import { Event } from '@/types/calendar'
 import {
   Dialog,
@@ -14,7 +14,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import SignatureCanvas from "react-signature-canvas";
+import SignatureCanvas from "react-signature-canvas"
+import { EventClickArg, EventContentArg } from "@fullcalendar/core"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 import "./styles.css"
@@ -54,13 +55,13 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
 }, [openForm, form.signature])
 
   //  When clicking on a date
-  const handleDateClick = (info: any) => {
+  const handleDateClick = (info: DateClickArg) => {
     setForm({ id: "", clientName: "", sex: "male", age: "", date: info.dateStr, time: "", address: "", signature: "" })
     setOpenForm(true)
   }
 
   // When clicking on an existing event
-  const handleEventClick = (info: any) => {
+  const handleEventClick = (info: EventClickArg) => {
     const found = events.find(ev => ev.id === info.event.id)
     if (found) {
       setSelectedEvent(found)
@@ -279,6 +280,7 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
               {selectedEvent.signature && (
                 <div>
                   <b>Signature:</b>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={selectedEvent.signature} alt="Signature" className="mt-2 border rounded-md w-40" />
                 </div>
               )}
@@ -293,7 +295,7 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
     </div>
   )
 }
-const renderEventContent = (eventInfo: any) => {
+const renderEventContent = (eventInfo: EventContentArg) => {
   return (
     <div className="text-black">
       <strong>{eventInfo.event.title}</strong>

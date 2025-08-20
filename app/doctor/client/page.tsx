@@ -191,6 +191,7 @@ export default function ClientDiagnosis() {
                 {selected.signature ? (
                   <div>
                     <b>Client Signature:</b>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={selected.signature} alt="Client Signature" className="mt-2 border rounded-md w-40" />
                   </div>
                 ) : (

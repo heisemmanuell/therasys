@@ -5,11 +5,11 @@ import { useState } from "react";
 import Image from 'next/image'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 import { Menu, X } from "lucide-react";
 
 const MarketerHeader = () => {
-  const pathname = usePathname()
+  // const pathname = usePathname()
    const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path: string) => {

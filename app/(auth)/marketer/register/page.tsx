@@ -58,11 +58,6 @@ export default function MarketerRegister() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
 
-  const handleTabClick = (tab: "marketer" | "doctor") => {
-    setActiveTab(tab);
-    router.push(`/${tab}/register`);
-  };
-
   const form = useForm<FormValues>({
     resolver: zodResolver(registerFormSchema),
     defaultValues: {

@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -61,12 +60,12 @@ export default function MarketerRegister() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const activeTab =
-    pathname.includes("/doctor") ? "doctor" : "marketer";
+  // const activeTab =
+  //   pathname.includes("/doctor") ? "doctor" : "marketer";
 
-  const handleTabClick = (tab: 'marketer' | 'doctor') => {
-    router.push(`/${tab}/register`);
-  };
+  // const handleTabClick = (tab: 'marketer' | 'doctor') => {
+  //   router.push(`/${tab}/register`);
+  // };
 
   const form = useForm<FormValues>({
     resolver: zodResolver(registerFormSchema),

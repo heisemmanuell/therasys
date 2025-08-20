@@ -2,22 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 import {
   Dialog,
   DialogContent,
@@ -26,31 +10,30 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-import { Calendar, Cigarette, Dna, Globe, LoaderCircle, Phone } from 'lucide-react'
+import { Calendar, Dna, Phone } from 'lucide-react'
 import UpdateClientSignatureForm from "@/components/forms/UpdateClientSignatureForm"
 import ChangePinForm from "@/components/forms/ChangePinForm"
 
 import { useState } from "react"
 import Image from "next/image"
-import Footer from "@/components/Footer"
 
 export default function DoctorDashboard() {
   const [openClientSignature, setOpenClientSignature] = useState(false);
-  const [openParentSignature, setOpenParentSignature] = useState(false);
+  // const [openParentSignature, setOpenParentSignature] = useState(false);
   const [openClientPin, setOpenClientPin] = useState(false);
-  const [openParentPin, setOpenParentPin] = useState(false);
+  // const [openParentPin, setOpenParentPin] = useState(false);
   const [clientSignature, setClientSignature] = useState<string | null>(null);
-  const [parentSignature, setParentSignature] = useState<string | null>(null);
+  // const [parentSignature, setParentSignature] = useState<string | null>(null);
 
-  const handleClientPinChange = (oldPin: string, newPin: string) => {
-    console.log('Changing client PIN:', { oldPin, newPin });
+  // const handleClientPinChange = (oldPin: string, newPin: string) => {
+    // console.log('Changing client PIN:', { oldPin, newPin });
     // Add API call to change PIN here
-  };
+  // };
 
-  const handleParentPinChange = (oldPin: string, newPin: string) => {
-    console.log('Changing parent PIN:', { oldPin, newPin });
+  // const handleParentPinChange = (oldPin: string, newPin: string) => {
+    // console.log('Changing parent PIN:', { oldPin, newPin });
     // Add API call to change PIN here
-  };
+  // };
 
   return (
     <div className="container max-w-[1350px] mx-auto p-6 space-y-6">

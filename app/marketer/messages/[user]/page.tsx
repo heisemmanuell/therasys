@@ -196,6 +196,7 @@ export default function ChatPage() {
                                 {!isCurrentUser && (
                                     <div className="mr-3">
                                         <div className="w-10 h-10 rounded-full bg-red-600 overflow-hidden">
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img src="/placeholder.svg?height=40&width=40" alt="Avatar"
                                                  className="w-full h-full object-cover"/>
                                         </div>
@@ -218,6 +219,7 @@ export default function ChatPage() {
                                 {isCurrentUser && (
                                     <div className="ml-3 order-2">
                                         <div className="w-10 h-10 rounded-full bg-red-600 overflow-hidden">
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img src="/placeholder.svg?height=40&width=40" alt="Avatar"
                                                  className="w-full h-full object-cover"/>
                                         </div>

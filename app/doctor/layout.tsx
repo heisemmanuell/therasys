@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useRouter } from "nextjs-toploader/app";
+import React from "react";
+// import { useRouter } from "nextjs-toploader/app";
 import DoctorHeader from "@/components/DoctorHeader";
-import { isAuthenticated } from "@/hooks/auth";
+// import { isAuthenticated } from "@/hooks/auth";
 import SocketContextProvider from "@/context/SocketContextProvider";
 import Footer from "@/components/Footer";
 

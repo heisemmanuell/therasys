@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Event } from '@/types/calendar'
 import { DoctorEventList } from '@/components/DoctorEventList'
 // import DoctorCalendarView from '@/components/DoctorCalendarView'
 import DoctorCalendarView from '@/components/DoctorCalendarViewModal'

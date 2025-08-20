@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Phone, Video, MoreVertical, Smile, Paperclip, Send, Check, CheckCheck, PhoneMissed, ListFilter, Camera, Mic, MessageSquareDot, Pen, Group, Users, Signature, FileText, ImagePlay } from "lucide-react";
+import { Search, Phone, Video, Smile, Paperclip, Send, Check, CheckCheck, PhoneMissed, ListFilter, Camera, Mic, MessageSquareDot, Pen, Users, Signature, FileText, ImagePlay } from "lucide-react";
 
 // Placeholder data
 const contacts = [
@@ -124,7 +124,7 @@ export default function ChatDashboard() {
   const [messageInput, setMessageInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | null>(null);
-  const [audioChunks, setAudioChunks] = useState<Blob[]>([]);
+  // const [audioChunks, setAudioChunks] = useState<Blob[]>([]);
   const [recordedAudioURL, setRecordedAudioURL] = useState<string | null>(null);
 
   const filteredContacts = contacts.filter((contact) => contact.name.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -177,6 +177,7 @@ export default function ChatDashboard() {
             <div key={contact.id} onClick={() => setSelectedContact(contact)} className={`p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 transition-colors ${selectedContact.id === contact.id ? "bg-gray-100" : ""}`}>
               <div className="flex items-center space-x-3">
                 <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={contact.avatar || "/placeholder.svg"} alt={contact.name} className="w-12 h-12 rounded-full object-cover" />
                   {contact.online && <div className="absolute bottom-0 right-0 w-3 h-3 bg-blue-900 rounded-full border-2 border-white"></div>}
                 </div>
@@ -202,6 +203,7 @@ export default function ChatDashboard() {
         <div className="bg-gray-100 rounded-tr-xl border-b border-gray-200 p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 ">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={selectedContact.avatar || "/placeholder.svg"} alt={selectedContact.name} className="w-10 h-10 rounded-full object-cover" />
               <div>
                 <h3 className="text-lg font-medium text-gray-900">{selectedContact.name}</h3>
