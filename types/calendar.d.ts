@@ -4,7 +4,11 @@ export interface Event {
   date: string
   time: string
   location: string
+  address: string
   image?: string
+  age: string
+  sex: 'male' | 'female'
+  signature?: string
   type: 'client-meeting' | 'festival' | 'staff-meeting' | 'general-meeting'
 }
 

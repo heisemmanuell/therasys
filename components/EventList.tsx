@@ -23,9 +23,9 @@ export function EventList({ events }: EventListProps) {
               <div className="space-y-1">
                 <h4 className="text-sm font-medium leading-none">{event.title}</h4>
                 <p className="text-sm text-muted-foreground">
-                  {new Date(event.date).toLocaleDateString()} at {event.time}
+                  {new Date(event.date).toLocaleDateString()} by {event.time}
                 </p>
-                <p className="text-sm text-muted-foreground">{event.location}</p>
+                <p className="text-sm text-muted-foreground">{event.address}</p>
               </div>
             </div>
           ))}

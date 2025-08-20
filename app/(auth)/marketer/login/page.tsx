@@ -63,7 +63,7 @@ export default function MarketerLogin() {
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 flex flex-col items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         
-        <p className='text-gray-600 mb-4 text-center max-w-lg' >With Client Portal, you can connect with your staff through a convenient, safe and secure environment.</p>
+        <p className='text-gray-600 mb-4 text-center max-w-lg' >Welcome back, you can connect clients with doctors through a convenient, safe and secure environment.</p>
         <Card className="w-full max-w-md shadow-xl rounded-md border-none">
           <CardHeader>
             <p className='font-bold text-lg inline-flex items-center'>Log into Marketer Portal</p>

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <NextTopLoader color="#0448E7" />
+      {/* <NextTopLoader color="#0448E7" /> */}
       <body className={raleway.className}>
         {children}
       </body>

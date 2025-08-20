@@ -23,7 +23,7 @@ const mockEvents = [
     description: "Consultation with Jane",
   },
   {
-    id: "3",
+    id: "3", 
     title: "John Doe",
     date: "2025-08-15",
     time: "14:30",

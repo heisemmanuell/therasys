@@ -197,10 +197,10 @@ export default function MarketerRegister() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Select Register</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Become a Marketer/Agent</h1>
             
             {/* Tabs */}
-            <div className="flex justify-center space-x-8 border-b border-gray-200">
+            {/* <div className="flex justify-center space-x-8 border-b border-gray-200">
               <button
                 onClick={() => handleTabClick("marketer")}
                 className={`pb-2 px-1 border-b-2 font-medium text-sm transition-colors ${
@@ -221,7 +221,7 @@ export default function MarketerRegister() {
               >
                 Doctor
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Registration Form */}

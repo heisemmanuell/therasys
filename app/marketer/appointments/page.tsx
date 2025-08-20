@@ -13,7 +13,10 @@ const initialEvents: Event[] = [
     date: '2024-11-04',
     time: '07:15 AM',
     location: '96 Davion Mission Suite 157',
-    type: 'client-meeting'
+    type: 'client-meeting',
+    address: '96 Davion Mission Suite 157',
+    age: '30',
+    sex: 'male'
   },
   {
     id: '2',
@@ -21,7 +24,10 @@ const initialEvents: Event[] = [
     date: '2024-11-23',
     time: '01:00 PM',
     location: '823 Monte Flats Suite 158',
-    type: 'festival'
+    type: 'festival',
+    address: '96 Davion Mission Suite 157',
+    age: '30',
+    sex: 'male'
   }
 ]
 
