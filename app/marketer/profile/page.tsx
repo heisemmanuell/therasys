@@ -132,12 +132,12 @@ export default function DoctorDashboard() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-4">
-                <p className="font-medium">Client Signature</p>
+                <p className="font-medium">Marketer Signature</p>
                 <div className="flex items-center justify-center border rounded-lg p-4 h-24 bg-gray-50">
                   {clientSignature ? (
                     <Image src={clientSignature} alt="Client Signature" height={100} width={100} className="h-full w-auto" />
                   ) : (
-                    <p className="text-muted-foreground text-sm">No client signature available</p>
+                    <p className="text-muted-foreground text-sm"></p>
                   )}
                 </div>
                 <Dialog open={openClientSignature} onOpenChange={setOpenClientSignature}>
@@ -170,121 +170,12 @@ export default function DoctorDashboard() {
                 </Dialog>
               </div>
 
-              <div className="space-y-4">
-                <p className="font-medium">Add Signature</p>
-                <div className="flex items-center justify-center border rounded-lg p-4 h-24 bg-gray-50">
-                  {parentSignature ? (
-                    <Image src={parentSignature} alt="Parent Signature" height={100} width={100} className="h-full w-auto" />
-                  ) : (
-                    <p className="text-muted-foreground text-sm">No signature available</p>
-                  )}
-                </div>
-                <Dialog open={openParentSignature} onOpenChange={setOpenParentSignature}>
-                  <DialogTrigger asChild>
-                    <Button variant="secondary" className="w-full">
-                      Add Signature
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Add Parent Signature</DialogTitle>
-                    </DialogHeader>
-                    <UpdateClientSignatureForm onSignatureUpdate={setParentSignature} setOpen={setOpenParentSignature} />
-                  </DialogContent>
-                </Dialog>
-                {parentSignature && (
-                  <>
-                    <Button
-                      variant="outline"
-                      className="w-full"
-                      onClick={() => setOpenParentPin(true)}
-                    >
-                      Change PIN?
-                    </Button>
-                    <Dialog open={openParentPin} onOpenChange={setOpenParentPin}>
-                      <DialogContent>
-                        <DialogHeader>
-                          <DialogTitle>Change Parent PIN</DialogTitle>
-                        </DialogHeader>
-                        <ChangePinForm setOpen={setOpenParentPin} onPinChange={handleParentPinChange} />
-                      </DialogContent>
-                    </Dialog>
-                  </>
-                )}
-              </div>
+              
             </div>
           </CardContent>
         </Card>
       </div>
-
-      {/* Documents Section */}
-      <Card>
-        <CardContent className="pt-6">
-          <Tabs defaultValue="pending">
-            <TabsList>
-              <TabsTrigger value="pending">Pending Documents</TabsTrigger>
-              <TabsTrigger value="completed">Completed Documents</TabsTrigger>
-            </TabsList>
-            <TabsContent value="pending" className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 border rounded-lg p-2">
-                  <span className="text-sm text-muted-foreground">
-                    Rows per page
-                  </span>
-                  <Select defaultValue="10">
-                    <SelectTrigger className="w-16">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="10">10</SelectItem>
-                      <SelectItem value="20">20</SelectItem>
-                      <SelectItem value="30">30</SelectItem>
-                      <SelectItem value="40">40</SelectItem>
-                      <SelectItem value="50">50</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <p className="text-sm text-muted-foreground">0-0 of 0</p>
-              </div>
-
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Doc ID</TableHead>
-                    <TableHead>Service Date</TableHead>
-                    <TableHead>Document Name</TableHead>
-                    <TableHead>Action</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell colSpan={4} className="text-center py-8">
-                      No documents found
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TabsContent>
-            <TabsContent value="completed">
-              {/* Similar table structure for completed documents */}
-            </TabsContent>
-          </Tabs>
-        </CardContent>
-      </Card>
-
-      {/* Upcoming Appointments Section */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg font-medium">
-            Upcoming Appointments
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">
-            No Upcoming Appointments in your calendar.
-          </p>
-        </CardContent>
-      </Card>
+      
     </div>
   )
 }

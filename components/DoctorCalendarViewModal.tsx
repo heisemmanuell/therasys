@@ -16,11 +16,12 @@ import "@/components/DoctorCalendarView/styles.css"
 
 interface EventData {
   id: string
-  title: string
+  clientName: string
+  sex: "male"
   date: string
   time: string
-  location: string
-  description?: string
+  address: string
+  signature?: string
 }
 
 interface DoctorCalendarViewProps {
@@ -43,7 +44,7 @@ export default function DoctorCalendarView({ events }: DoctorCalendarViewProps) 
         }}
         events={events.map((ev) => ({
           id: ev.id,
-          title: ev.title,
+          name: ev.clientName,
           start: `${ev.date}T${ev.time}`, // combine date + time
         }))}
         eventClick={(info) => {
@@ -60,7 +61,7 @@ export default function DoctorCalendarView({ events }: DoctorCalendarViewProps) 
     {selectedEvent && (
       <>
         <DialogHeader>
-          <DialogTitle>{selectedEvent.title}</DialogTitle>
+          <DialogTitle>{selectedEvent.clientName}</DialogTitle>
           <DialogDescription>
             Appointment details
           </DialogDescription>
@@ -68,9 +69,9 @@ export default function DoctorCalendarView({ events }: DoctorCalendarViewProps) 
         <div className="space-y-2">
           <p><strong>Date:</strong> {selectedEvent.date}</p>
           <p><strong>Time:</strong> {selectedEvent.time}</p>
-          <p><strong>Location:</strong> {selectedEvent.location}</p>
-          {selectedEvent.description && (
-            <p><strong>Notes:</strong> {selectedEvent.description}</p>
+          <p><strong>Address:</strong> {selectedEvent.address}</p>
+          {selectedEvent.sex && (
+            <p><strong>Sex:</strong> {selectedEvent.sex}</p>
           )}
         </div>
       </>
