@@ -1,42 +1,49 @@
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { DoctorEventList } from '@/components/DoctorEventList'
-// import DoctorCalendarView from '@/components/DoctorCalendarView'
 import DoctorCalendarView from '@/components/DoctorCalendarViewModal'
+import { Event } from '@/types/calendar'
 
-const mockEvents = [
+const mockEvents : Event[] = [
   {
     id: "1",
+    title: "Consultation with John",
     clientName: "John",
-    sex: "male",
     date: "2025-08-06",
     time: "15:27",
-    address: "Buea, Cameroon",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "35",
+    sex: "male",
+    type: "client-meeting",
+    signature: "",
   },
   {
     id: "2",
+    title: "Consultation with Doe",
     clientName: "Doe",
-    sex: "male",
     date: "2025-08-20",
     time: "15:27",
-    address: "Yaounde, Cameroon",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "28",
+    sex: "male",
+    type: "client-meeting",
+    signature: "",
   },
   {
     id: "3",
-    clientName: "Joseph",
+    title: "Follow-up with Jane",
+    clientName: "Jane",
+    date: "2025-08-06",
+    time: "15:27",
+    location: "Clinic A",
+    address: "123 Street, City",
+    age: "32",
     sex: "female",
-    date: "2025-08-30",
-    time: "19:27",
-    address: "Abuja, Nigeria",
+    type: "client-meeting",
+    signature: "",
   },
-  // {
-  //   id: "3", 
-  //   title: "John Doe",
-  //   date: "2025-08-15",
-  //   time: "14:30",
-  //   location: "Clinic Room 3",
-  //   description: "Follow-up appointment",
-  // },
 ]
 
 const ClientAppointments = () => {

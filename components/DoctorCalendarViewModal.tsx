@@ -17,7 +17,7 @@ import "@/components/DoctorCalendarView/styles.css"
 interface EventData {
   id: string
   clientName: string
-  sex: "male"
+  sex: string
   date: string
   time: string
   address: string

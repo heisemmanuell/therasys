@@ -54,7 +54,7 @@ const registerFormSchema = z.object({
 type FormValues = z.infer<typeof registerFormSchema>;
 
 export default function MarketerRegister() {
-  const [activeTab, setActiveTab] = useState<'marketer' | 'doctor'>('marketer');
+  // const [activeTab, setActiveTab] = useState<'marketer' | 'doctor'>('marketer');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
 
@@ -223,7 +223,7 @@ export default function MarketerRegister() {
           <Card className="shadow-xl border-none">
             <CardHeader>
               <h2 className="text-xl font-semibold text-gray-900">
-                {activeTab === 'marketer' ? 'Marketer' : 'Doctor'} Registration
+                Marketer Registration
               </h2>
             </CardHeader>
             <CardContent>

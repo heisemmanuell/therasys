@@ -58,7 +58,7 @@ export default function MarketerRegister() {
   // const [activeTab, setActiveTab] = useState<'marketer' | 'doctor'>('marketer');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   // const activeTab =
   //   pathname.includes("/doctor") ? "doctor" : "marketer";
