@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 // import { useRouter } from 'nextjs-toploader/app';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
