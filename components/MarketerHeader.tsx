@@ -79,7 +79,7 @@ const MarketerHeader = () => {
         {mobileOpen && (
           <nav className="md:hidden bg-white border-t flex flex-col space-y-2 px-6 py-4">            
             <Link onClick={() => setMobileOpen(false)} href="/marketer/appointments" className={`hover:text-primary ${isActive('/marketer/appointments') ? 'text-primary' : ''}`}>Appointments</Link>
-            <Link onClick={() => setMobileOpen(false)} href="/marketer/messaging" className={`hover:text-primary ${isActive('/marketer/messaging') ? 'text-primary' : ''}`}>Messaging</Link>
+            <Link onClick={() => setMobileOpen(false)} href="/marketer/messages" className={`hover:text-primary ${isActive('/marketer/messages') ? 'text-primary' : ''}`}>Messaging</Link>
             <Link onClick={() => setMobileOpen(false)} href="/marketer/register-a-doc" className={`hover:text-primary ${isActive('/marketer/register-a-doc') ? 'text-primary' : ''}`}>Register a Doctor</Link>
           </nav>
         )}

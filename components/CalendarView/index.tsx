@@ -156,11 +156,11 @@ const CalendarView = ({ events, onAddEvent, onUpdateEvent, onDeleteEvent }: Prop
 
       {/* Add / Edit Form */}
       <Dialog open={openForm} onOpenChange={setOpenForm}>
-        <DialogContent>
+        <DialogContent className='overflow-y-scroll max-h-[90vh]'>
           <DialogHeader>
             <DialogTitle>{form.id ? "Edit Appointment" : "New Appointment"}</DialogTitle>
           </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 ">
             <div>
               <Label>Client Name</Label>
               <Input 
