@@ -59,11 +59,14 @@ export default function DoctorLogin() {
         setError("Unauthorized access. Please log in as a doctor.");
         logout();
       }
-    } catch (err: any) {
-      console.error("Login failed:", err);
-      setError(
-        err.response?.data?.error || "Failed to login. Please try again."
-      );
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error("Login failed:", err.message);
+        setError(err.message);
+      } else {
+        console.error("Login failed:", err);
+        setError("Failed to login. Please try again.");
+      }
     }
   };
 
