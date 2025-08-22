@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input"
 
 import { useState } from "react"
 import Image from "next/image"
-import AvatarUpload from "@/components/AvatarUpload"
+// import AvatarUpload from "@/components/AvatarUpload"
 
 export default function DoctorDashboard() {
   const [showPassword, setShowPassword] = useState(false);
