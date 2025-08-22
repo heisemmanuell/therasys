@@ -153,7 +153,24 @@ export default function DoctorProfile() {
                 </Dialog>
               </div>
 
-              
+              <div className="space-y-4">
+                <p className="font-medium">Reset Password</p>
+                <label>Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter new password"
+                  className="w-full p-2 border rounded-lg"
+                />
+                <label>Confirm Password</label>
+                <input
+                  type="password"
+                  placeholder="Confirm new password"
+                  className="w-full p-2 border rounded-lg"
+                />
+                <Button variant="secondary" className="w-full">
+                  Reset Password
+                </Button>
+              </div>
             </div>
           </CardContent>
         </Card>

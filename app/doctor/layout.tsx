@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 // import { useRouter } from "nextjs-toploader/app";
 import DoctorHeader from "@/components/DoctorHeader";
 // import { isAuthenticated } from "@/hooks/auth";
@@ -12,7 +12,7 @@ const DoctorLayout = ({ children }: { children: React.ReactNode }) => {
 
   // useEffect(() => {
   //   if (!isAuthenticated()) {
-  //     router.push("/auth/client/login");
+  //     router.push("/auth/doctor/login");
   //   }
   // }, [router]);
 
